@@ -67,8 +67,8 @@ create table reservation(
 );
 
 create table commentaire(
-    idEvent int auto_increment,
-    idPar int auto_increment,
+    idEvent int,
+    idPar int,
     contenu varchar(100),
     dateC date,
     constraint comm_pk primary key(idEvent,idPar),
