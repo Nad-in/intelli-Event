@@ -5,7 +5,7 @@ create table utilisateur(
     id int auto_increment,
     nom varchar(50),
     prenom varchar(70),
-    email varchar(100),
+    email varchar(100) unique,
     password varchar(30),
     constraint user_pk primary key(id)
 );
