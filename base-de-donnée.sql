@@ -57,7 +57,6 @@ create table reservation(
     nbPlace int,
     billetN varchar(100),
     prixB int,
-    qte int,
     status_R varchar(20),
     idPar int,
     idEvent int,
