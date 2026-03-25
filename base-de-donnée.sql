@@ -11,20 +11,20 @@ create table utilisateur(
 );
 
 create table administrateur(
-    idAdmin int auto_increment,
+    idAdmin int,
     constraint admin_pk primary key(idAdmin),
     constraint admin_fk1 foreign key(idAdmin) references utilisateur(id)
 );
 
 
 create table organisateur(
-    idOrg int auto_increment,
+    idOrg int,
     constraint org_pk primary key(idOrg),
     constraint org_fk1 foreign key(idOrg) references utilisateur(id)
 );
 
 create table participant(
-    idPar int auto_increment,
+    idPar int,
     constraint par_pk primary key(idPar),
     constraint par_fk1 foreign key(idPar) references utilisateur(id)
 );
