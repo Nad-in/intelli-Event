@@ -32,16 +32,31 @@ exports.login = (req, res) => {
 }
 
 exports.register =(req, res)=>{
-    const {nom, prenom, email, password} = req.body;
+    const {nom, prenom, email, password, roles} = req.body;
 
     const hashPassword =bcrypt.hashSync(password,10);
 
     bd.query(
-        "INSERT INTO utilisateur (nom, prenom, email, password) VALUES (?,?,?,?)", [nom, prenom, email, hashPassword], (err, result) => {
+        "INSERT INTO utilisateur (nom, prenom, email, password, roles) VALUES (?,?,?,?,?)", [nom, prenom, email, hashPassword, roles], (err, result) => {
             if (err) return res.status(500).json(err);
-            res.status(201).json({
-                msg : "Utilisateur crée avec succès",
-            })
+
+            const userId = result.insertId;
+            let query ="";
+            if(roles === "organisateur"){
+                query= "INSERT INTO organisateur (idOrg) VALUES(?)";
+            }
+            if(roles === "participant"){
+                query="INSERT INTO participant (idPar) VALUES(?)";
+            }
+            else{
+                return res.status(400).json({ message: "role invalide" });
+            }
+
+            bd.query(query(query , [userId], (err2)=>{
+                res.status(201).json({
+                    msg : "Utilisateur crée avec succès",
+                })
+            }))
         }
     )
 }
