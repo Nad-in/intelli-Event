@@ -1,4 +1,4 @@
-/* 
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -37,7 +37,7 @@ header ul li a:hover {
   color: orange;
 }
 
-/* SECTION EVENTS (كيف teskerti) 
+/* SECTION EVENTS (كيف teskerti) */
 section div {
   display: flex;
   flex-wrap: wrap;
@@ -46,19 +46,19 @@ section div {
 }
 
 section div img {
-  width: 250px;      /* كبرنا الصور 
+  width: 250px;      /* كبرنا الصور */
   height: 150px;
   object-fit: cover;
   border-radius: 15px;
   transition: 0.3s;
 }
 
-/* effet hover 
+/* effet hover */
 section div img:hover {
   transform: scale(1.08);
 }
 
-/* EVENTS CATEGORY IMAGES 
+/* EVENTS CATEGORY IMAGES */
 section a img {
   width: 300px;
   height: 180px;
@@ -71,13 +71,13 @@ section a img:hover {
   transform: scale(1.05);
 }
 
-/* TITRES 
+/* TITRES */
 h1 {
   text-align: center;
   color: #333;
 }
 
-/* FORMULAIRE (login / inscription) 
+/* FORMULAIRE (login / inscription) */
 input {
   width: 250px;
   padding: 10px;
@@ -100,24 +100,24 @@ button:hover {
   background-color: darkorange;
 }
 
-/* CENTER FORM 
+/* CENTER FORM */
 form, 
 .auth-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70vh; /* يخليها في الوسط 
+  height: 70vh; /* يخليها في الوسط */
 }
 
-/* PASSWORD LINK 
+/* PASSWORD LINK*/ 
 .PassWord {
   color: blue;
   cursor: pointer;
   font-size: 14px;
 }
 
-/* FOOTER 
+/* FOOTER */
 footer {
   background-color: #111;
   color: white;
@@ -133,6 +133,6 @@ footer a {
 
 footer a:hover {
   color: orange;
-}*/
+}
 
 
