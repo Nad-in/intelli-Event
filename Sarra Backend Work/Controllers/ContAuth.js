@@ -52,11 +52,11 @@ exports.register =(req, res)=>{
                 return res.status(400).json({ message: "role invalide" });
             }
 
-            bd.query(query(query , [userId], (err2)=>{
+            bd.query(query , [userId], (err2)=>{
                 res.status(201).json({
                     msg : "Utilisateur crée avec succès",
-                })
-            }))
+                });
+            });
         }
     )
 }

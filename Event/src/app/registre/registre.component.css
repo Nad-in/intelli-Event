@@ -1,62 +1,49 @@
+
 .box {
-    width: 500px;
+    width: 550px;
     margin: 40px auto;
     padding: 30px;
     background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    box-shadow: 0px 8px 20px silver;
+    border-radius: 12px;
+    box-shadow: 0px 8px 25px silver;
     font-family: sans-serif;
 }
 
 h2 {
-    text-align: center; 
-    color: darkslategray; 
+    text-align: center;
+    color: darkslategray;
     margin-bottom: 25px;
 }
 
 .ligne {
-    display: flex; 
-    gap: 15px; 
+    display: flex;
+    gap: 15px;
     margin-bottom: 15px;
 }
 
 .champ {
-    display: flex; 
-    flex-direction: column; 
-    flex: 1; 
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 15px;
 }
 
 label {
-    font-size: 13px; 
-    margin-bottom: 5px; 
+    font-size: 13px;
+    margin-bottom: 5px;
     color: dimgray;
+    font-weight: bold;
 }
 
 input {
-    padding: 10px; 
-    border: 1px solid lightgray; 
-    border-radius: 5px; 
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
     outline: none;
 }
 
 input:focus {
     border-color: deeppink;
-}
-
-.captcha-img img {
-    margin-top: 22px; 
-    border-radius: 5px; 
-    border: 1px solid lightgray;
-}
-
-.check-box {
-    margin: 15px 0; 
-    font-size: 13px; 
-    color: dimgray; 
-    display: flex; 
-    gap: 8px;
 }
 
 .btn {
@@ -65,7 +52,7 @@ input:focus {
     background-color: deeppink;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
@@ -76,13 +63,13 @@ input:focus {
 }
 
 .bas {
-    text-align: center; 
-    margin-top: 20px; 
+    text-align: center;
+    margin-top: 20px;
     font-size: 14px;
 }
 
 a {
-    color: deeppink; 
-    text-decoration: none; 
+    color: deeppink;
+    text-decoration: none;
     font-weight: bold;
 }
