@@ -1,11 +1,11 @@
+
 .box {
     width: 400px;
     margin: 80px auto;
     padding: 40px;
     background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    box-shadow: 0px 8px 20px silver;
+    border-radius: 12px;
+    box-shadow: 0px 8px 25px silver;
     font-family: sans-serif;
 }
 
@@ -32,7 +32,6 @@ input {
     border: 1px solid lightgray;
     border-radius: 6px;
     outline: none;
-    font-size: 15px;
 }
 
 input:focus {
@@ -49,7 +48,6 @@ input:focus {
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 .btn:hover {
@@ -60,15 +58,10 @@ input:focus {
     text-align: center;
     margin-top: 25px;
     font-size: 14px;
-    color: gray;
 }
 
 a {
     color: deeppink;
     text-decoration: none;
     font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
 }
