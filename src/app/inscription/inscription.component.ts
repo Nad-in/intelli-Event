@@ -8,5 +8,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './inscription.component.css'
 })
 export class InscriptionComponent {
-
+  
 }

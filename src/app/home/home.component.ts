@@ -11,11 +11,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  event : Evenement[] = [];
+  eventt : Evenement[] = [];
   constructor(public EventService: EvenementService){
     this.EventService.getAllEvent().subscribe(
-      data=>{this.event=data}
+      data=>{this.eventt=data}
     )
   }
-
 }
