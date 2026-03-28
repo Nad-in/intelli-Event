@@ -21,6 +21,5 @@ export class EventDetailComponent {
         this.EventService.getEventById(id).subscribe(data => {this.event= data});
       }
     })
-
   }
 }
