@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> bda4b559106c1839ab5cb29937941f6bae45059e
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -110,7 +114,11 @@ form,
   height: 70vh; /* يخليها في الوسط */
 }
 
+<<<<<<< HEAD
 /* PASSWORD LINK */
+=======
+/* PASSWORD LINK*/ 
+>>>>>>> bda4b559106c1839ab5cb29937941f6bae45059e
 .PassWord {
   color: blue;
   cursor: pointer;
