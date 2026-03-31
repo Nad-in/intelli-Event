@@ -38,7 +38,7 @@ exports.register = (req, res) => {
         (err, result) => {
             if (err) return res.status(500).json(err);
 
-            /* const userId = result.insertId;
+            const userId = result.insertId;
             let query = "";
             if (roles === "organisateur") {
                 query = "INSERT INTO organisateur (idOrg) VALUES(?)";
@@ -51,7 +51,7 @@ exports.register = (req, res) => {
             bd.query(query, [userId], (err2) => {
                 res.status(201).json({ msg: "Utilisateur crée avec succès" });
             });
-            */
+            
 
             res.status(201).json({
                 msg: "Utilisateur crée avec succès"
