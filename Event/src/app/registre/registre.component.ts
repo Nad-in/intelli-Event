@@ -12,36 +12,27 @@ import { EventService } from '../services/event.service';
   styleUrl: './registre.component.css'
 })
 export class RegistreComponent {
-  nom: string;
-  prenom: string;
-  email: string;
-  password: string;
-  roles: string; 
+  nom = '';
+  prenom = '';
+  email = '';
+  password = '';
+  roles = 'participant';
 
-  constructor(private eventService: EventService, private router: Router) {
-    this.nom = '';
-    this.prenom = '';
-    this.email = '';
-    this.password = '';
-    this.roles = 'participant'; 
-  }
+  constructor(private eventService: EventService, private router: Router) {}
 
   onRegister() {
-    const userData = {
-      nom: this.nom,
-      prenom: this.prenom,
-      email: this.email,
-      password: this.password,
+    const data = { 
+      nom: this.nom, 
+      prenom: this.prenom, 
+      email: this.email, 
+      password: this.password, 
       roles: this.roles 
     };
-
-    this.eventService.register(userData).subscribe({
-      next: (res) => {
-        alert('Compte créé avec succès !');
-        this.router.navigate(['/login']);
-      },
+    
+    this.eventService.register(data).subscribe({
+      next: () => this.router.navigate(['/login']),
       error: (err) => {
-        console.error('Erreur inscription', err);
+        alert(err.error.message || "Erreur d'inscription");
       }
     });
   }

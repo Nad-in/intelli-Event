@@ -12,29 +12,20 @@ import { EventService } from '../services/event.service';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  email: string;
-  password: string;
+  email = '';
+  password = '';
 
-  constructor(private eventService: EventService, private router: Router) {
-    this.email = '';
-    this.password = '';
-  }
+  constructor(private eventService: EventService, private router: Router) {}
 
   onLogin() {
-    const userData = {
-      email: this.email,
-      password: this.password
-    };
-
-    this.eventService.login(userData).subscribe({
+    const data = { email: this.email, password: this.password };
+    this.eventService.login(data).subscribe({
       next: (res) => {
         localStorage.setItem('token', res.token);
-        alert('Connexion réussie !');
         this.router.navigate(['/']);
       },
       error: (err) => {
-        console.error('Erreur login', err);
-        alert('Email ou mot de passe incorrect');
+        alert(err.error.message || "Erreur de connexion");
       }
     });
   }

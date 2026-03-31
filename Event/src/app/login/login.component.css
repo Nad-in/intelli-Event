@@ -1,67 +1,59 @@
 
-.box {
+.login {
     width: 400px;
     margin: 80px auto;
-    padding: 40px;
+    padding: 30px;
     background-color: white;
-    border-radius: 12px;
-    box-shadow: 0px 8px 25px silver;
+    border: 1px solid silver;
+    border-radius: 10px;
     font-family: sans-serif;
 }
 
 h2 {
     text-align: center;
-    color: darkslategray;
-    margin-bottom: 30px;
+    color: black;
 }
 
-.champ {
-    display: flex;
-    flex-direction: column;
+.bloc {
     margin-bottom: 20px;
 }
 
 label {
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: dimgray;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input {
-    padding: 12px;
-    border: 1px solid lightgray;
-    border-radius: 6px;
-    outline: none;
-}
-
-input:focus {
-    border-color: deeppink;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .btn {
     width: 100%;
-    padding: 14px;
+    padding: 12px;
     background-color: deeppink;
     color: white;
     border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .btn:hover {
-    background-color: mediumvioletred;
+    background-color: hotpink;
 }
 
-.bas {
+.txt {
     text-align: center;
-    margin-top: 25px;
     font-size: 14px;
+    margin-top: 20px;
 }
 
 a {
     color: deeppink;
     text-decoration: none;
-    font-weight: bold;
 }

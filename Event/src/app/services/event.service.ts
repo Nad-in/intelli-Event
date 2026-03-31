@@ -13,10 +13,10 @@ export class EventService {
   constructor(private http: HttpClient) { }
 
   register(user: any): Observable<any> {
-    return this.http.post(`${this.url}/register`, user);
+    return this.http.post(this.url + '/register', user);
   }
 
   login(user: any): Observable<any> {
-    return this.http.post(`${this.url}/login`, user);
+    return this.http.post(this.url + '/login', user);
   }
 }
