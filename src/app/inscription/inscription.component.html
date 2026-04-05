@@ -10,15 +10,13 @@
     <label>Mot de passe</label>
         <input type="password" [(ngModel)]="password"> 
     <label>Confirmer votre mot de passe</label>
-        <input type="password" >
-    <select>
+        <input type="password" [(ngModel)]="confirmPassword">
+    <select [(ngModel)]="roles"]>
         <option value="organisateur">organisateur</option>
         <option value="participant">participant</option>
     </select>
 
-    <button  routerLink="/login">S'INSCRIRE</button>
+    <button (click)="register()">S'INSCRIRE</button>
 
 <p>Vous avez déjà un compte ? <a routerLink="/login">Se connecter</a></p>
 </div>
-
-
