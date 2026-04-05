@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class InscriptionComponent {
 
-  nom = '';
+    nom = '';
   prenom = '';
   email = '';
   password = '';
