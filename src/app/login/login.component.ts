@@ -13,7 +13,7 @@ import { User } from '../models/user';
 })
 export class LoginComponent {
 
-  email = '';
+   email = '';
   password = '';
   message ='';
   user! : User;
@@ -22,14 +22,17 @@ export class LoginComponent {
   login() {
     this.auth.login({ email : this.email , password: this.password }).subscribe({
       next: res => {
+        console.log(res);
+
         localStorage.setItem('token', res.token);
+        this.user=res.user;
 
         if(this.user.roles=="participant"){
           this.router.navigate(['/']);
         }
 
         if(this.user.roles=="organisateur"){
-          this.router.navigate(['/org/event/:idOrg'])
+          this.router.navigate(['/org/event',this.user.id])
         }
 
         if(this.user.roles=="administrateur"){
